@@ -46,3 +46,14 @@ a:link, a:visited {
   a:link:active, a:visited:active {
     color: (internal value);
   }
+
+
+
+// Actual start of official document
+
+/**
+ * Smooth scrolling on the whole document
+ */
+ html {
+	scroll-behavior: smooth;
+}

@@ -1,0 +1,20 @@
+/* SCSS HEX */
+/* SCSS Gradient */
+a:link, a:visited {
+  color: internal value;
+  text-decoration: underline;
+  cursor: auto;
+}
+
+a:link:active, a:visited:active {
+  color: internal value;
+}
+
+/**
+ * Smooth scrolling on the whole document
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+/*# sourceMappingURL=myStyle.css.map */

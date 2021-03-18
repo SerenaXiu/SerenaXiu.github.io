@@ -1,20 +1,22 @@
 /* SCSS Gradient */
-a:link, a:visited {
-  color: internal value;
-  text-decoration: underline;
-  cursor: auto;
+/* Colors */
+/* Opacity */
+/* Button */
+html body #container-content {
+  padding: 5px 10px 15px 20px;
 }
 
-a:link:active, a:visited:active {
-  color: internal value;
+html body .fixedbutton:link, html body .fixedbutton:visited {
+  background-color: #1b4f4fff;
+  color: white;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
-
-/* SCSS HEX */
-/**
- * Smooth scrolling on the whole document
- */
-html {
-  scroll-behavior: smooth;
+html body .fixedbutton:hover, html body .fixedbutton:active {
+  background-color: #0f3d3dff;
 }
 
 /**
@@ -25,21 +27,48 @@ html {
     scroll-behavior: auto;
   }
 }
-h1 {
+/**
+ * Smooth scrolling on the whole document
+ */
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-image: url("../rsrc/feet-longboarding1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 0px;
+  width: 100%;
+}
+html body h1 {
   color: #0f3d3dff;
 }
-
-.fixedbutton {
-  position: fixed;
-  bottom: 50px;
-  right: 0;
-  background: #0f3d3dff;
-  padding: 10px 15px 10px 15px;
-  color: #fff !important;
+html body h2 {
+  color: #1b4f4fff;
 }
-
-.fixedbutton:hover {
-  background: #1b4f4fff;
+html body p.containerwhole {
+  color: #122626ff;
+}
+html body .fixedbutton {
+  position: fixed;
+}
+html body #btn-contact-me {
+  bottom: 15%;
+  right: 0;
+}
+html body #container-whole {
+  flex: 1;
+  padding: 0% 4%;
+}
+html body #container-content {
+  background-color: rgba(233, 243, 251, 0.5);
+}
+html body #footer-id {
+  background-color: #59b8b8;
 }
 
 /*# sourceMappingURL=myStyle.css.map */

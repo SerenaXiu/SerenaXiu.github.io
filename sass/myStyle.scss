@@ -30,38 +30,50 @@ $gradient-bottom-left: linear-gradient(315deg, #e9f3fbff, #89ccceff, #59b8b8ff, 
 $gradient-radial: radial-gradient(#e9f3fbff, #89ccceff, #59b8b8ff, #0f3d3dff, #1b4f4fff, #122626ff);
 
 
-// link
-a:link, a:visited {
-    color: (internal value);
-    text-decoration: underline;
-    cursor: auto;
-  }
-  
-  a:link:active, a:visited:active {
-    color: (internal value);
-  }
-
-
-
 // Actual start of official document
 
-/* SCSS HEX */
-$color-primary-color-1: #59b8b8ff;
+// Variables /////////////////////////////////
+
+/* Colors */
+$color-primary-color-1: rgb(89, 184, 184);
 $color-primary-color-2: #89ccceff;
-$color-content-backgrnd: #e9f3fbff;
+$color-content-backgrnd: rgb(233, 243, 251);
 $color-heading1: #0f3d3dff;
 $color-heading2: #1b4f4fff;
 $color-text: #122626ff;
 
+/* Opacity */
+$opacity-alpha: 0.5;
+
+/* Button */
 $button-hover: $color-heading1;
 
 
-/**
- * Smooth scrolling on the whole document
- */
- html {
-	scroll-behavior: smooth;
+// Shared Styles /////////////////////////////
+%shared-content-padding {
+  padding: 5px 10px 15px 20px; //top right bottom left
+  // padding: 10px 20px;//top & bottom then left & right
 }
+
+%shared-link-btn {
+  &:link, &:visited {
+    background-color: $color-heading2;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    
+    display: inline-block;
+  }
+
+  &:hover, &:active {
+    background-color: $color-heading1;
+  }
+
+}
+
+//////////////////////////////////////////////
 
 /**
  * Disable smooth scrolling when users have prefers-reduced-motion enabled
@@ -72,21 +84,81 @@ $button-hover: $color-heading1;
 	}
 }
 
+/**
+ * Smooth scrolling on the whole document
+ */
+ html {
+	scroll-behavior: smooth;
+ 
+
+  body {
+    background-image: url('../rsrc/feet-longboarding1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    // to enable sticky footer
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    padding: 0px;
+    width: 100%;
+
+    h1 {
+      color: $color-heading1;
+    }
+
+    h2 {
+      color: $color-heading2;
+    }
+
+    p.containerwhole {
+      color: $color-text;
+    }
+
+    .fixedbutton {
+      @extend %shared-link-btn;   
+      position: fixed;
+    }
+
+    #btn-contact-me {
+      bottom: 15%;
+      right: 0;
+    }
+
+    #container-whole {
+      flex: 1;
+      padding: 0% 4%;
+    }
+
+    #container-content {
+      background-color: rgba($color-content-backgrnd, $opacity-alpha);
+      @extend %shared-content-padding;
+    }
+
+    #footer-id {
+      background-color: $color-primary-color-1;
+    }
 
 
-h1 {
-  color: $color-heading1;
-}
 
-.fixedbutton {
-  position: fixed;
-  bottom: 50px;
-  right: 0;
-  background: $color-heading1;
-  padding: 10px 15px 10px 15px;
-  color: #fff !important;
   }
-  
-.fixedbutton:hover {
-background: $color-heading2;
+
+
+
+
 }
+
+// .fixedbutton {
+//   position: fixed;
+//   bottom: 50px;
+//   right: 0;
+//   background: $color-heading1;
+//   padding: 10px 15px 10px 15px;
+//   color: #fff !important;
+//   }
+  
+// .fixedbutton:hover {
+// background: $color-heading2;
+// }

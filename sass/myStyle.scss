@@ -15,13 +15,7 @@
 // $deep-jungle-green: #1b4f4fff;
 // $dark-jungle-green: #122626ff;
 
-/* SCSS HEX */
-$color-content-backgrnd: #e9f3fbff;
-$color-primary-color-2: #89ccceff;
-$color-primary-color-1: #59b8b8ff;
-$rich-black: #0f3d3dff;
-$deep-jungle-green: #1b4f4fff;
-$dark-jungle-green: #122626ff;
+
 
 
 /* SCSS Gradient */
@@ -51,9 +45,48 @@ a:link, a:visited {
 
 // Actual start of official document
 
+/* SCSS HEX */
+$color-primary-color-1: #59b8b8ff;
+$color-primary-color-2: #89ccceff;
+$color-content-backgrnd: #e9f3fbff;
+$color-heading1: #0f3d3dff;
+$color-heading2: #1b4f4fff;
+$color-text: #122626ff;
+
+$button-hover: $color-heading1;
+
+
 /**
  * Smooth scrolling on the whole document
  */
  html {
 	scroll-behavior: smooth;
+}
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+ @media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+
+
+h1 {
+  color: $color-heading1;
+}
+
+.fixedbutton {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  background: $color-heading1;
+  padding: 10px 15px 10px 15px;
+  color: #fff !important;
+  }
+  
+.fixedbutton:hover {
+background: $color-heading2;
 }

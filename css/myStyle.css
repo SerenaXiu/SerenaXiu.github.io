@@ -1,4 +1,3 @@
-/* SCSS HEX */
 /* SCSS Gradient */
 a:link, a:visited {
   color: internal value;
@@ -10,11 +9,37 @@ a:link:active, a:visited:active {
   color: internal value;
 }
 
+/* SCSS HEX */
 /**
  * Smooth scrolling on the whole document
  */
 html {
   scroll-behavior: smooth;
+}
+
+/**
+ * Disable smooth scrolling when users have prefers-reduced-motion enabled
+ */
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+h1 {
+  color: #0f3d3dff;
+}
+
+.fixedbutton {
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  background: #0f3d3dff;
+  padding: 10px 15px 10px 15px;
+  color: #fff !important;
+}
+
+.fixedbutton:hover {
+  background: #1b4f4fff;
 }
 
 /*# sourceMappingURL=myStyle.css.map */

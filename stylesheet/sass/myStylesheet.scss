@@ -34,3 +34,15 @@ $gradient-bottom-right: linear-gradient(135deg, #e9f3fbff, #89ccceff, #59b8b8ff,
 $gradient-top-left: linear-gradient(225deg, #e9f3fbff, #89ccceff, #59b8b8ff, #0f3d3dff, #1b4f4fff, #122626ff);
 $gradient-bottom-left: linear-gradient(315deg, #e9f3fbff, #89ccceff, #59b8b8ff, #0f3d3dff, #1b4f4fff, #122626ff);
 $gradient-radial: radial-gradient(#e9f3fbff, #89ccceff, #59b8b8ff, #0f3d3dff, #1b4f4fff, #122626ff);
+
+
+// link
+a:link, a:visited {
+    color: (internal value);
+    text-decoration: underline;
+    cursor: auto;
+  }
+  
+  a:link:active, a:visited:active {
+    color: (internal value);
+  }
